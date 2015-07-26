@@ -1,5 +1,3 @@
-% Default word layout - 12pt font, default margins, 1.5 spacing
-
 \documentclass[12pt, a4paper]{article}
 \usepackage{setspace}
 \usepackage{geometry}
@@ -10,9 +8,16 @@
  	bottom=25.4mm
 }
 
-% defined variables %
+\usepackage[english, american]{babel}
+\usepackage{csquotes}
+\usepackage[%
+style=apa,backend=biber
+]{biblatex}
+\DeclareLanguageMapping{english}{american-apa}
 
-% start of document declaration %
+\addbibresource{ref.bib}
+
+% Title Declaration
 
 \title{Title\vspace{-2ex}}
 \author{Subject\\Assignment Number\\Author\\Student Number}
@@ -21,21 +26,16 @@
 \begin{document}
 
 \maketitle
-%
-%\begin{document}
-
 \begin{spacing}{1.5}
-
-% document written between spacing \begin and \end
-
-% \section{Introduction} [100 words]
-
-% \section{Analysis} [200 words]
-
-% \section{Arguments} [600 words]
-
-% \section{Conclusion} [100 words]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% START OF DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
 \end{spacing}
 \end{document}
